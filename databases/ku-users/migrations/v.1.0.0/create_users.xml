@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <changeSet id="1" author="shurapilipuk@gmail.com">
+        <createTable tableName="users">
+            <column name="id" type="bigSerial" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(264)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="surname" type="varchar(264)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="username" type="varchar(16)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="password" type="varchar(264)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="inserted_data_at_utc" type="timestamp without time zone">
+                <constraints nullable="false"/>
+            </column>
+            <column name="updated_data_at_utc" type="timestamp without time zone"/>
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>
