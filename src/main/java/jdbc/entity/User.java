@@ -10,8 +10,6 @@ public class User {
     private int age;
     private String username;
     private String password;
-    private LocalDateTime inserted_data_at_utc;
-    private LocalDateTime updated_data_at_utc;
 
     public long getId() {
         return id;
@@ -61,50 +59,28 @@ public class User {
         this.password = password;
     }
 
-    public LocalDateTime getInserted_data_at_utc() {
-        return inserted_data_at_utc;
-    }
-
-    public void setInserted_data_at_utc(LocalDateTime inserted_data_at_utc) {
-        this.inserted_data_at_utc = inserted_data_at_utc;
-    }
-
-    public LocalDateTime getUpdated_data_at_utc() {
-        return updated_data_at_utc;
-    }
-
-    public void setUpdated_data_at_utc(LocalDateTime updated_data_at_utc) {
-        this.updated_data_at_utc = updated_data_at_utc;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && age == user.age && Objects.equals(name, user.name) && Objects.equals(surname, user.surname) && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(inserted_data_at_utc, user.inserted_data_at_utc) && Objects.equals(updated_data_at_utc, user.updated_data_at_utc);
+        return id == user.id && age == user.age && name.equals(user.name) && surname.equals(user.surname) && username.equals(user.username) && password.equals(user.password);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, surname, age, username, password, inserted_data_at_utc, updated_data_at_utc);
+        return Objects.hash(id, name, surname, age, username, password);
     }
 
     @Override
     public String toString() {
-        return "jdbc.DAO.User{" +
+        return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", inserted_data_at_utc=" + inserted_data_at_utc +
-                ", updated_data_at_utc=" + updated_data_at_utc +
                 '}';
-    }
-
-    private int umnozitNaDva(int a) {
-        return a * 2;
     }
 }

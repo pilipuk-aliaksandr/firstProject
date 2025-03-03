@@ -13,8 +13,6 @@ public class JdbcApp {
 //        user.setUsername("Kaledir");
 //        user.setPassword("Vishne");
 //        user.setAge(1);
-//        user.setInserted_data_at_utc(LocalDateTime.now());
-//        user.setUpdated_data_at_utc(LocalDateTime.now());
 //        UserDaoImpl createUser = new UserDaoImpl();
 //        createUser.createUser(user);
 //        UserRepositoryImpl update = new UserRepositoryImpl();

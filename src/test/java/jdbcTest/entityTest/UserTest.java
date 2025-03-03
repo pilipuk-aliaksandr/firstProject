@@ -87,37 +87,7 @@ class UserTest {
     }
 
     @Test
-    void getInserted_data_at_utc() {
-        assertEquals(null, user.getInserted_data_at_utc());
-    }
-
-    @Test
-    void setInserted_data_at_utc() {
-        user.setInserted_data_at_utc(LocalDateTime.now());
-        assertEquals(LocalDateTime.now(), user.getInserted_data_at_utc());
-    }
-
-    @Test
-    void getUpdated_data_at_utc() {
-        assertEquals(null, user.getUpdated_data_at_utc());
-    }
-
-    @Test
-    void setUpdated_data_at_utc() {
-        user.setUpdated_data_at_utc(LocalDateTime.of(2025, 2, 5, 18, 0, 0));
-        assertEquals(LocalDateTime.of(2025, 2, 5, 18, 0, 0), user.getUpdated_data_at_utc());
-    }
-
-    @Test
-    void testEquals() {
-    }
-
-    @Test
-    void testHashCode() {
-    }
-
-    @Test
     void testToString() {
-        assertEquals("jdbc.DAO.User{id=0, name='null', surname='null', age=0, username='null', password='null', inserted_data_at_utc=null, updated_data_at_utc=null}", user.toString());
+        assertEquals("User{id=0, name='null', surname='null', age=0, username='null', password='null'}", user.toString());
     }
 }

@@ -24,10 +24,6 @@
             <column name="password" type="varchar(264)">
                 <constraints nullable="false"/>
             </column>
-            <column name="inserted_data_at_utc" type="timestamp without time zone">
-                <constraints nullable="false"/>
-            </column>
-            <column name="updated_data_at_utc" type="timestamp without time zone"/>
         </createTable>
     </changeSet>
 
