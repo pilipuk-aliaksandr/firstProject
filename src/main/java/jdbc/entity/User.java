@@ -1,4 +1,5 @@
-import java.sql.Timestamp;
+package jdbc.entity;
+
 import java.time.LocalDateTime;
 import java.util.Objects;
 
@@ -91,7 +92,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" +
+        return "jdbc.DAO.User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +

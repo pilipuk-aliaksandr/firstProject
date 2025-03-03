@@ -1,3 +1,6 @@
+package jdbcTest.entityTest;
+
+import jdbc.entity.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -5,7 +8,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import java.lang.reflect.Method;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -116,20 +118,6 @@ class UserTest {
 
     @Test
     void testToString() {
-        assertEquals("User{id=0, name='null', surname='null', age=0, username='null', password='null', inserted_data_at_utc=null, updated_data_at_utc=null}", user.toString());
-    }
-
-    @ParameterizedTest
-    @ValueSource(ints = {5, 4})
-    void testPrivateMethod(int a) {
-        try {
-            Method method = User.class.getDeclaredMethod("umnozitNaDva", int.class);
-            method.setAccessible(true);
-            assertEquals(a * 2, Integer.parseInt(method.invoke(user, a).toString()));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
+        assertEquals("jdbc.DAO.User{id=0, name='null', surname='null', age=0, username='null', password='null', inserted_data_at_utc=null, updated_data_at_utc=null}", user.toString());
     }
 }
