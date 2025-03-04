@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 
 public class JdbcApp {
     public static void main(String[] args) {
+        System.out.println("sasha pil is a good man");
 //        User user = new User();
 //        user.setName("Sasha");
 //        user.setSurname("Pilipuk");
